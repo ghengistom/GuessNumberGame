@@ -1,0 +1,27 @@
+import java.util.Scanner; //gets scanner library
+
+public class GuessNum
+{
+	public static void main(String[] args)
+	{
+		int randomNum;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Guess what the random number generator is generating.(between 0 and 10)");
+		int userinput=input.nextInt();
+		randomNum = 0 + (int)(Math.random()*10); 
+		
+		if (userinput==randomNum)
+		{
+			System.out.print("You are correct!");
+		}
+		else if (userinput<randomNum)
+		{
+			System.out.print("You are too low!");
+		}
+		else if (userinput>randomNum)
+		{
+			System.out.print("You are too high!");
+		}
+	}
+		
+}
