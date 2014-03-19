@@ -12,7 +12,8 @@ public class GuessNum
 		
 		if (userinput==randomNum)
 		{
-			System.out.print("You are correct!");
+			System.out.println("You are correct!");
+			System.out.print("The dice actually rolled a ");
 			System.out.print(randomNum);
 		}
 		else if (userinput<randomNum)
