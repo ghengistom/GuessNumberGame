@@ -22,18 +22,18 @@ public class RockPaper
 			if (userinput==1 && randomNum==2)
 			{
 				LOSSES++;
-				System.out.print("YOUR ROLL WAS");
+				System.out.print("YOUR ROLL WAS ");
 				System.out.println(userinput);
-				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.print("YOUR OPPONENT'S ROLL WAS ");
 				System.out.println(randomNum);
 				System.out.println("LOSS!!");
 			}
 			else if (userinput==1 && randomNum==3)
 			{
 				WINS++;
-				System.out.print("YOUR ROLL WAS");
+				System.out.print("YOUR ROLL WAS ");
 				System.out.println(userinput);
-				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.print("YOUR OPPONENT'S ROLL WAS ");
 				System.out.println(randomNum);
 				System.out.println("WIN!!");
 			}
@@ -42,7 +42,7 @@ public class RockPaper
 				WINS++;
 				System.out.print("YOUR ROLL WAS");
 				System.out.println(userinput);
-				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.print("YOUR OPPONENT'S ROLL WAS ");
 				System.out.println(randomNum);
 				System.out.println("WIN!!");
 			}
@@ -51,25 +51,25 @@ public class RockPaper
 				LOSSES++;
 				System.out.print("YOUR ROLL WAS");
 				System.out.println(userinput);
-				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.print("YOUR OPPONENT'S ROLL WAS ");
 				System.out.println(randomNum);
 				System.out.println("LOSS!!");
 			}
 			else if (userinput==3 && randomNum==1)
 			{
 				LOSSES++;
-				System.out.print("YOUR ROLL WAS");
+				System.out.print("YOUR ROLL WAS ");
 				System.out.println(userinput);
-				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.print("YOUR OPPONENT'S ROLL WAS ");
 				System.out.println(randomNum);
 				System.out.println("LOSS!!");
 			}
 			else if (userinput==3 && randomNum==2)
 			{
 				WINS++;
-				System.out.print("YOUR ROLL WAS");
+				System.out.print("YOUR ROLL WAS ");
 				System.out.println(userinput);
-				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.print("YOUR OPPONENT'S ROLL WAS ");
 				System.out.println(randomNum);
 				System.out.println("WIN!!");
 			}
@@ -80,20 +80,20 @@ public class RockPaper
 			else 
 			{
 				TIE++;
-				System.out.print("YOUR ROLL WAS");
+				System.out.print("YOUR ROLL WAS ");
 				System.out.println(userinput);
-				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.print("YOUR OPPONENT'S ROLL WAS ");
 				System.out.println(randomNum);
 				System.out.println("TIE!!");
 			}
 						
 		}
 		System.out.println("RESULTS:");
-		System.out.print("Total wins are");
+		System.out.print("Total wins are: ");
 		System.out.println(WINS);
-		System.out.print("Total losses are:");
+		System.out.print("Total losses are: ");
 		System.out.println(LOSSES);
-		System.out.print("Total ties are:");
+		System.out.print("Total ties are: ");
 		System.out.println(TIE);
 	}
 }
