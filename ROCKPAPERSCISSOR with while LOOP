@@ -1,0 +1,114 @@
+import java.util.Scanner;
+
+//gets scanner library
+
+public class RockPaper
+{
+	public static void main(String[] args)
+	{
+		
+		int randomNum, WINS=0, LOSSES=0, TIE=0;
+		Scanner input = new Scanner(System.in);
+		int Cont=1;
+		
+		while (Cont!=0)
+		{
+			System.out.print("ROLL.(Rock(1)Paper(2)Scissor(3)") ;
+			int userinput=input.nextInt();
+			randomNum = 1 + (int)(Math.random()*3);
+			
+			if (userinput==1 && randomNum==2)
+			{
+				LOSSES++;
+				System.out.print("YOU CHOSE ROCK ");
+				System.out.print("YOUR OPPONENT CHOSE PAPER ");
+				System.out.println(randomNum);
+				System.out.println("LOSS!!");
+			}
+			else if (userinput==1 && randomNum==3)
+			{
+				WINS++;
+				System.out.print("YOU CHOSE ROCK ");
+				System.out.print("YOUR OPPONENT CHOSE SCISSOR ");
+				System.out.println(randomNum);
+				System.out.println("WIN!!");
+			}
+			else if (userinput==2 && randomNum==1)
+			{
+				WINS++;
+				System.out.print("YOU CHOSE PAPER");
+				System.out.print("YOUR OPPONENT CHOSE ROCK");
+				System.out.println(randomNum);
+				System.out.println("WIN!!");
+			}
+			else if (userinput==2 && randomNum==3)
+			{
+				LOSSES++;
+				System.out.print("YOU CHOSE PAPER");
+				System.out.print("YOUR OPPONENT CHOSE SCISSOR ");
+				System.out.println(randomNum);
+				System.out.println("LOSS!!");
+			}
+			else if (userinput==3 && randomNum==1)
+			{
+				LOSSES++;
+				System.out.print("YOU CHOSE SCISSOR ");
+				System.out.print("YOUR OPPONENT CHOSE ROCK ");
+				System.out.println(randomNum);
+				System.out.println("LOSS!!");
+			}
+			else if (userinput==3 && randomNum==2)
+			{
+				WINS++;
+				System.out.print("YOU CHOSE SCISSOR ");
+				System.out.print("YOUR OPPONENT CHOSE PAPER ");
+				System.out.println(randomNum);
+				System.out.println("WIN!!");
+			}
+			else if (userinput>3)
+			{
+				return;
+			}
+			else 
+			{
+				TIE++;
+				System.out.println("YOU CHOSE ");
+				if(userinput==1)
+				{
+					System.out.println("Rock");
+				}
+				else if (userinput==2)
+				{
+					System.out.println("Paper");
+				}
+				else if (userinput==3)
+				{
+					System.out.println("Scissors");
+				}
+				System.out.println("YOUR OPPONENT CHOSE ");
+				if(randomNum==1)
+				{
+					System.out.print("Rock");
+				}
+				else if (randomNum==2)
+				{
+					System.out.print("Paper");
+				}
+				else if (userinput==3)
+				{
+					System.out.print("Scissors");
+				}
+				System.out.println("TIE!!");
+			}
+			System.out.println("CONTINUE?(1 for yes 0 for no)");
+			Cont = input.nextInt();	
+		}
+		System.out.println("RESULTS:");
+		System.out.print("Total wins are: ");
+		System.out.println(WINS);
+		System.out.print("Total losses are: ");
+		System.out.println(LOSSES);
+		System.out.print("Total ties are: ");
+		System.out.println(TIE);
+	}
+}
