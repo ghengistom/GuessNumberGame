@@ -6,40 +6,94 @@ public class RockPaper
 {
 	public static void main(String[] args)
 	{
-		char continue;
+		
 		int randomNum, WINS=0, LOSSES=0, TIE=0;
 		Scanner input = new Scanner(System.in);
-		System.out.print("ROLL.(Rock(1)Paper(2)Scissor(3))");
-		int userinput=input.nextInt();
 		
-		while (continue!='n')
+		
+		for(int i=5; i>=1; --i)
 		{
-			randomNum = 0 + (int)(Math.random()*3);
+			System.out.print("ROLL.(Rock(1)Paper(2)Scissor(3)) YOU GET ");
+			System.out.print(i);
+			System.out.print(" TRIES");
+			int userinput=input.nextInt();
+			randomNum = 1 + (int)(Math.random()*3);
 			
 			if (userinput==1 && randomNum==2)
 			{
 				LOSSES++;
+				System.out.print("YOUR ROLL WAS");
+				System.out.println(userinput);
+				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.println(randomNum);
+				System.out.println("LOSS!!");
 			}
 			else if (userinput==1 && randomNum==3)
 			{
 				WINS++;
+				System.out.print("YOUR ROLL WAS");
+				System.out.println(userinput);
+				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.println(randomNum);
+				System.out.println("WIN!!");
 			}
 			else if (userinput==2 && randomNum==1)
 			{
 				WINS++;
+				System.out.print("YOUR ROLL WAS");
+				System.out.println(userinput);
+				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.println(randomNum);
+				System.out.println("WIN!!");
 			}
 			else if (userinput==2 && randomNum==3)
 			{
 				LOSSES++;
+				System.out.print("YOUR ROLL WAS");
+				System.out.println(userinput);
+				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.println(randomNum);
+				System.out.println("LOSS!!");
 			}
 			else if (userinput==3 && randomNum==1)
 			{
 				LOSSES++;
+				System.out.print("YOUR ROLL WAS");
+				System.out.println(userinput);
+				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.println(randomNum);
+				System.out.println("LOSS!!");
 			}
 			else if (userinput==3 && randomNum==2)
 			{
 				WINS++;
+				System.out.print("YOUR ROLL WAS");
+				System.out.println(userinput);
+				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.println(randomNum);
+				System.out.println("WIN!!");
 			}
+			else if (userinput>3)
+			{
+				return;
+			}
+			else 
+			{
+				TIE++;
+				System.out.print("YOUR ROLL WAS");
+				System.out.println(userinput);
+				System.out.print("YOUR OPPONENT'S ROLL WAS");
+				System.out.println(randomNum);
+				System.out.println("TIE!!");
+			}
+						
 		}
+		System.out.println("RESULTS:");
+		System.out.print("Total wins are");
+		System.out.println(WINS);
+		System.out.print("Total losses are:");
+		System.out.println(LOSSES);
+		System.out.print("Total ties are:");
+		System.out.println(TIE);
 	}
 }
