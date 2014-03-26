@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+//gets scanner library
+
+public class RockPaper
+{
+	public static void main(String[] args)
+	{
+		char continue;
+		int randomNum, WINS=0, LOSSES=0, TIE=0;
+		Scanner input = new Scanner(System.in);
+		System.out.print("ROLL.(Rock(1)Paper(2)Scissor(3))");
+		int userinput=input.nextInt();
+		
+		while (continue!='n')
+		{
+			randomNum = 0 + (int)(Math.random()*3);
+			
+			if (userinput==1 && randomNum==2)
+			{
+				LOSSES++;
+			}
+			else if (userinput==1 && randomNum==3)
+			{
+				WINS++;
+			}
+			else if (userinput==2 && randomNum==1)
+			{
+				WINS++;
+			}
+			else if (userinput==2 && randomNum==3)
+			{
+				LOSSES++;
+			}
+			else if (userinput==3 && randomNum==1)
+			{
+				LOSSES++;
+			}
+			else if (userinput==3 && randomNum==2)
+			{
+				WINS++;
+			}
+		}
+	}
+}
