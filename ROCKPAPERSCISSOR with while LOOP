@@ -88,15 +88,15 @@ public class RockPaper
 				System.out.println("YOUR OPPONENT CHOSE ");
 				if(randomNum==1)
 				{
-					System.out.print("Rock");
+					System.out.println("Rock");
 				}
 				else if (randomNum==2)
 				{
-					System.out.print("Paper");
+					System.out.println("Paper");
 				}
 				else if (userinput==3)
 				{
-					System.out.print("Scissors");
+					System.out.println("Scissors");
 				}
 				System.out.println("TIE!!");
 			}
